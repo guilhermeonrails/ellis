@@ -1,0 +1,9 @@
+# Arquivo .dockerignore
+
+# Ambientes virtuais
+venv
+
+
+# Cache do Python
+__pycache__
+
