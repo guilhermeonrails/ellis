@@ -1,0 +1,9 @@
+services: # Define os serviços que serão executados pelo Docker Compose
+  app: # Nome do serviço (pode ser usado para referenciar em outros serviços)
+    build: . # Constrói a imagem Docker a partir do Dockerfile localizado no diretório atual
+    container_name: imersaodevops-app # Define o nome do container gerado
+    ports:
+      - "8000:8000" # Mapeia a porta 8000 do host para a porta 8000 do container
+    volumes:
+      - .:/app # Sincroniza o diretório atual do host com o diretório /app do container (útil para desenvolvimento)
+    ##command: ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000","--reload"] # Comando para iniciar o servidor FastAPI
